@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ML Studio</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="home">
+<div id="top"></div>
+<section class="hero">
+  <h1>Train Machine Learning Models Your Way</h1>
+  <p>Upload your clean dataset, select your variables, choose a model and evaluate its performance.</p>
+  <p style="font-size:15px;margin-top:-14px"><b>Note:</b> upload only a clean CSV file.</p>
+  <a class="btn big" href="upload.html">Start Training</a><a class="btn big out" href="#workflow">View Workflow</a>
+</section>
+<main>
+  <div class="grid g4" style="margin-bottom:20px">
+    <div class="card stat"><div class="n">12</div><div class="l">Datasets</div></div>
+    <div class="card stat"><div class="n">8</div><div class="l">Models</div></div>
+    <div class="card stat"><div class="n">94.2%</div><div class="l">Best Accuracy</div></div>
+    <div class="card stat"><div class="n">28</div><div class="l">Experiments</div></div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h2>Model Accuracy Comparison</h2><p class="mute">Sample values</p><div id="bars"></div></div>
+    <div class="card"><h2>Model Performance</h2><p class="mute">Precision, recall and F1 (sample values)</p><div id="cols"></div></div>
+  </div>
+  <h2 id="workflow" style="margin:30px 0 14px">How it works</h2>
+  <div class="grid g5">
+    <div class="card step"><div class="n">1</div><h2>Upload Dataset</h2><p>Add a clean CSV file and preview its first rows.</p></div>
+    <div class="card step"><div class="n">2</div><h2>Select Variables</h2><p>Pick the columns, the features (X) and the target (Y).</p></div>
+    <div class="card step"><div class="n">3</div><h2>Configure Training</h2><p>Choose classification or regression and the train/test split.</p></div>
+    <div class="card step"><div class="n">4</div><h2>Train Model</h2><p>Select a model and train it on your data.</p></div>
+    <div class="card step"><div class="n">5</div><h2>View Results</h2><p>See the metrics and graphs from the test data.</p></div>
+  </div>
+</main>
+<script src="script.js"></script></body></html>

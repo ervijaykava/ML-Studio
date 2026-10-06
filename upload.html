@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ML Studio</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="upload">
+<div id="top"></div>
+<main>
+  <div id="steps"></div>
+  <h1>Upload Your Dataset</h1>
+  <p class="sub">Upload a clean CSV file to begin your machine learning workflow.</p>
+  <div class="drop" id="drop"><b>Drag &amp; Drop CSV Here</b><p class="mute">or <u>Browse File</u></p></div>
+  <input type="file" id="file" accept=".csv" class="hide">
+  <p class="err" id="err"></p>
+
+  <div id="loaded" class="hide">
+    <div class="card" style="margin-top:20px">
+      <h2 id="fname"></h2><p id="fsize" class="mute"></p><p class="ok">✓ Dataset uploaded successfully</p>
+    </div>
+    <div class="card"><h2>Dataset Preview</h2><div class="tbl" id="preview"></div></div>
+
+    <div class="card"><h2>Select Columns</h2>
+      <div class="row"><input type="text" id="search" placeholder="Search columns">
+        <button class="btn light" id="all">Select All</button><button class="btn light" id="none">Clear All</button>
+        <span class="mute" id="count"></span></div>
+      <div class="chips" id="cols"></div></div>
+
+    <div class="card"><h2>Feature Variables (X)</h2><p class="mute">Choose one or more.</p>
+      <div class="chips" id="xs"></div>
+      <h2 style="margin-top:18px">Target Variable (Y)</h2><select id="y"></select>
+      <p style="margin-top:14px"><b id="xy"></b></p></div>
+
+    <div class="card"><h2>Problem Type</h2>
+      <div class="grid g2" style="margin-top:12px">
+        <div class="pick" data-p="Classification"><b>Classification</b><span>Predict a category, like yes / no.</span></div>
+        <div class="pick" data-p="Regression"><b>Regression</b><span>Predict a number, like a price.</span></div></div></div>
+
+    <div class="card"><h2>Train / Test Split</h2>
+      <div class="row" id="splits"></div>
+      <div class="split"><div id="trainbar" style="background:var(--acc)"></div><div id="testbar" style="background:#94a3b8"></div></div></div>
+    <button class="btn big" id="next">Continue to Training</button>
+    <p class="err" id="err2"></p>
+  </div>
+</main>
+<script src="script.js"></script></body></html>
